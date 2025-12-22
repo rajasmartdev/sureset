@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureSet </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <a href="tel:+1234567890" class="topbar-contact-item">
+                        <i class="fas fa-phone topbar-icon"></i>
+                        <span>+123 456 7890</span>
+                    </a>
+                    <a href="mailto:sureset.info@aleramedtech.com" class="topbar-contact-item">
+                        <i class="fas fa-envelope topbar-icon"></i>
+                        <span>sureset.info@aleramedtech.com</span>
+                    </a>
+                </div>
+                <div class="topbar-right">
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <a href="#" class="navbar-logo-link">
+                    <img src="img/SureSet logo.png" alt="SureSet Logo" class="navbar-logo">
+                </a>
+
+                <button class="navbar-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="navbar-menu-item">
+                        <a href="index.html" class="navbar-menu-link">Home</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="about.html" class="navbar-menu-link">About Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">SafeTrak Technology</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">Products</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="resourses.html" class="navbar-menu-link">Resources</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="contact.html" class="navbar-menu-link">Contact Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <button class="navbar-cta-button" id="openModalBtn">Request Evaluation Samples</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="close-btn" id="closeModalBtn" aria-label="Close"></button>
+
+            <div class="form-header">
+                <h1 id="headerTitle">Request Evaluation Samples</h1>
+                <p id="headerSubtitle">Complete the form below to receive SureSet™ evaluation samples</p>
+            </div>
+
+            <div class="form-body">
+                <!-- Form Content -->
+                <div class="form-content" id="formContent">
+                    <form id="evaluationForm" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullNameError">Please enter your full name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Work Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError">Please enter a valid work email address</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="designation">Designation <span class="required">*</span></label>
+                            <input type="text" id="designation" name="designation" required
+                                placeholder="e.g., Nurse Manager, Physician, Clinical Director">
+                            <span class="error-message" id="designationError">Please enter your designation</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Department <span class="required">*</span></label>
+                            <input type="text" id="department" name="department" required
+                                placeholder="e.g., Emergency, ICU, Cardiology">
+                            <span class="error-message" id="departmentError">Please enter your department</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="facilityName">Hospital/Clinic Name <span class="required">*</span></label>
+                            <input type="text" id="facilityName" name="facilityName" required>
+                            <span class="error-message" id="facilityNameError">Please enter your hospital or clinic
+                                name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productType">Product Type <span class="required">*</span></label>
+                            <select id="productType" name="productType" required>
+                                <option value="">-- Select Product Type --</option>
+                                <option value="sureset-peripheral-iv">SureSet™ Peripheral IV Securement Device</option>
+                                <option value="sureset-picc">SureSet™ PICC Line Securement</option>
+                                <option value="sureset-central-line">SureSet™ Central Line Securement</option>
+                                <option value="sureset-dialysis">SureSet™ Dialysis Catheter Securement</option>
+                                <option value="multiple">Multiple Products</option>
+                            </select>
+                            <span class="error-message" id="productTypeError">Please select a product type</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                            <span class="error-message" id="phoneError">Please enter a valid phone number</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedVolume">Estimated Monthly Volume</label>
+                            <input type="text" id="estimatedVolume" name="estimatedVolume"
+                                placeholder="e.g., 500 units">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalInfo">Additional Information</label>
+                            <textarea id="additionalInfo" name="additionalInfo"
+                                placeholder="Please share any specific requirements or questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Request</button>
+                    </form>
+                </div>
+
+                <!-- Thank You Content -->
+                <div class="thank-you-content" id="thankYouContent">
+                    <div class="thank-you-icon">
+                        <div class="checkmark"></div>
+                    </div>
+                    <h2>Thank You!</h2>
+                    <p>Your request has been submitted successfully. Our team will contact you within 24-48 hours.</p>
+
+                    <div class="download-section">
+                        <h3>📄 Download Product Information</h3>
+                        <div class="download-buttons">
+                            <!-- <a href="#" class="download-btn" id="downloadBrochure">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Download Product Brochure
+                            </a>
+                            <a href="#" class="download-btn" id="downloadGuide">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                Download Clinical Guide
+                            </a> -->
+                            <a href="pdf/Sureset_Vascular Acess Safety.pdf" class="download-btn secondary-btn"
+                                target="_blank">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                                Download Full Product Catalog
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="submit-btn" id="closeThankYou">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modalOverlay');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const form = document.getElementById('evaluationForm');
+        const formContent = document.getElementById('formContent');
+        const thankYouContent = document.getElementById('thankYouContent');
+        const headerTitle = document.getElementById('headerTitle');
+        const headerSubtitle = document.getElementById('headerSubtitle');
+        const invalidEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'zoho.com'];
+
+        // Open Modal
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            showForm();
+        });
+
+        // Close Modal
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        // Close on overlay click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Show Form
+        function showForm() {
+            formContent.classList.remove('hidden');
+            thankYouContent.classList.remove('active');
+            headerTitle.textContent = 'Request Evaluation Samples';
+            headerSubtitle.textContent = 'Complete the form below to receive SureSet™ evaluation samples';
+        }
+
+        // Show Thank You Page
+        function showThankYou() {
+            formContent.classList.add('hidden');
+            thankYouContent.classList.add('active');
+            headerTitle.textContent = 'Request Submitted!';
+            headerSubtitle.textContent = 'Access your resources below';
+            document.querySelector('.modal-container').scrollTop = 0;
+        }
+
+        // Close Thank You and Reset
+        document.getElementById('closeThankYou').addEventListener('click', () => {
+            closeModal();
+            setTimeout(() => {
+                showForm();
+                form.reset();
+            }, 300);
+        });
+
+
+
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                return { valid: false, message: 'Please enter a valid email address' };
+            }
+
+            const domain = email.split('@')[1].toLowerCase();
+            if (invalidEmailDomains.includes(domain)) {
+                return { valid: false, message: 'Please use a work email address. Personal email domains (Gmail, Yahoo, Hotmail, etc.) are not accepted' };
+            }
+
+            return { valid: true };
+        }
+
+        function validatePhone(phone) {
+            const phonePattern = /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/;
+            return phonePattern.test(phone.replace(/\s/g, ''));
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(fieldId + 'Error');
+            field.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function clearError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(fieldId + 'Error');
+            field.classList.remove('error');
+            errorElement.classList.remove('show');
+        }
+
+        // Real-time validation for email
+        document.getElementById('email').addEventListener('blur', function () {
+            const email = this.value.trim();
+            if (email) {
+                const validation = validateEmail(email);
+                if (!validation.valid) {
+                    showError('email', validation.message);
+                } else {
+                    clearError('email');
+                }
+            }
+        });
+
+        // Real-time validation for phone
+        document.getElementById('phone').addEventListener('blur', function () {
+            const phone = this.value.trim();
+            if (phone && !validatePhone(phone)) {
+                showError('phone', 'Please enter a valid phone number');
+            } else if (phone) {
+                clearError('phone');
+            }
+        });
+
+        // Clear errors on input
+        form.querySelectorAll('input, select, textarea').forEach(field => {
+            field.addEventListener('input', function () {
+                clearError(this.id);
+            });
+        });
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Validate Full Name
+            const fullName = document.getElementById('fullName').value.trim();
+            if (!fullName) {
+                showError('fullName', 'Please enter your full name');
+                isValid = false;
+            } else {
+                clearError('fullName');
+            }
+
+            // Validate Email
+            const email = document.getElementById('email').value.trim();
+            const emailValidation = validateEmail(email);
+            if (!email || !emailValidation.valid) {
+                showError('email', emailValidation.message || 'Please enter a valid work email address');
+                isValid = false;
+            } else {
+                clearError('email');
+            }
+
+            // Validate Designation
+            const designation = document.getElementById('designation').value.trim();
+            if (!designation) {
+                showError('designation', 'Please enter your designation');
+                isValid = false;
+            } else {
+                clearError('designation');
+            }
+
+            // Validate Department
+            const department = document.getElementById('department').value.trim();
+            if (!department) {
+                showError('department', 'Please enter your department');
+                isValid = false;
+            } else {
+                clearError('department');
+            }
+
+            // Validate Facility Name
+            const facilityName = document.getElementById('facilityName').value.trim();
+            if (!facilityName) {
+                showError('facilityName', 'Please enter your hospital or clinic name');
+                isValid = false;
+            } else {
+                clearError('facilityName');
+            }
+
+            // Validate Product Type
+            const productType = document.getElementById('productType').value;
+            if (!productType) {
+                showError('productType', 'Please select a product type');
+                isValid = false;
+            } else {
+                clearError('productType');
+            }
+
+            // Validate Phone
+            const phone = document.getElementById('phone').value.trim();
+            if (!phone || !validatePhone(phone)) {
+                showError('phone', 'Please enter a valid phone number');
+                isValid = false;
+            } else {
+                clearError('phone');
+            }
+
+            if (isValid) {
+                // Here you would typically send the data to your server
+                console.log('Form submitted successfully!', {
+                    fullName,
+                    email,
+                    designation,
+                    department,
+                    facilityName,
+                    productType,
+                    phone,
+                    estimatedVolume: document.getElementById('estimatedVolume').value.trim(),
+                    additionalInfo: document.getElementById('additionalInfo').value.trim()
+                });
+
+                // Show Thank You page
+                showThankYou();
+            } else {
+                // Scroll to first error in modal
+                const firstError = form.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+    </script>
+    <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="4000"
+        data-bs-pause="false">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-content">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h1>SECUREMENT<br>RE-ENGINEERED<br>FOR MODERN CARE</h1>
+                            <p>SafeTrak™ Strain-Relief Technology delivers unmatched stability, reduced dislodgement,
+                                and improved comfort for every patient, in every setting.</p>
+                            <button class="cta-button">Request Evaluation Samples</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="img/banner-1.png" alt="Medical Care" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-content">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h1>SafeTrak™ <br>Technology</h1>
+                            <p>Engineered to Control Motion. Designed to Prevent Complications. Our tubing-centric
+                                architecture absorbs tension before it reaches the catheter, protecting the insertion
+                                site and reducing failures.</p>
+                            <button class="cta-button">Explore SafeTrak™</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="img/banner-2.png" alt="Patient Care" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-content">
+                    <div class="content-wrapper">
+                        <div class="text-content">
+                            <h1>SafeTrak™ <br>Technology</h1>
+                            <p>Engineered to Control Motion. Designed to Prevent Complications. Our tubing-centric
+                                architecture absorbs tension before it reaches the catheter, protecting the insertion
+                                site and reducing failures.</p>
+                            <button class="cta-button">Explore SafeTrak™</button>
+                        </div>
+                        <div class="image-content">
+                            <img src="img/banner-3.png" alt="Healthcare Professional" class="hero-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content-wrapper">
+                <div class="hero-left-content">
+                    <div class="hero-badge">Access. Organize. Secure.</div>
+                    <h1 class="hero-main-heading">Redefining Catheter Securement and Site Management</h1>
+                    <p class="hero-description">
+                        The SureSet™ Safe-Track Strain Relief Technology™ creates a streamlined
+                        system to reliably stabilize the PIV catheter and organize the infusion tubing.
+                    </p>
+
+                    <div class="hero-stats-grid">
+                        <div class="hero-stat-card">
+                            <div class="hero-stat-icon">
+                                <img src="img/icons/abt-1.png" alt="">
+                            </div>
+                            <p class="hero-stat-text">300M+ PIVs used yearly; up to 69% fail.</p>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="hero-stat-icon">
+                                <img src="img/icons/abt-2.png" alt="">
+                            </div>
+                            <p class="hero-stat-text">50% of clinicians cite catheter dislodgment as a major issue.</p>
+                        </div>
+                        <div class="hero-stat-card">
+                            <div class="hero-stat-icon">
+                                <img src="img/icons/abt-3.png" alt="">
+                            </div>
+                            <p class="hero-stat-text">41% of PIV material costs come from unscheduled restarts.</p>
+                        </div>
+                    </div>
+
+                    <a href="#" class="hero-cta-button">Know More</a>
+                </div>
+
+                <div class="hero-right-content">
+                    <a href="#">
+                        <img src="img/about.png" alt="SureSet Product" class="hero-product-image">
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content-grid">
+                <div class="about-image-wrapper">
+                    <img src="img/rapid different.png" alt="Alera Medtech" class="about-main-image">
+
+                </div>
+
+                <div class="about-text-content">
+                    <h2 class="about-main-title">Alera Medtech:</h2>
+                    <h3 class="about-subtitle">A Radically Different Medical Device Company</h3>
+                    <p class="about-description-text">
+                        Alera Medtech was created with a clear belief: essential medical devices
+                        deserve far more innovation than they have received. Across healthcare,
+                        many widely used devices have changed very little over several decades.
+                        Clinical practice has moved forward, yet the tools clinicians rely on every
+                        day have not kept pace. This creates avoidable complications, unnecessary
+                        costs, and limitations in patient care.
+                    </p>
+                    <p class="about-highlight-text">
+                        Alera exists to overcome these limitations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SafeTrak Section -->
+    <section class="safetrak-section">
+        <div class="safetrak-container">
+            <div class="safetrak-header">
+                <h2 class="safetrak-main-title">What Makes SafeTrak™ Different</h2>
+                <p class="safetrak-subtitle">Innovative Strain-Relief Technology for Better Patient Outcomes</p>
+            </div>
+
+            <div class="safetrak-content-grid">
+                <div class="safetrak-text-wrapper">
+                    <p class="safetrak-description-para">
+                        SureSet™ SafeTrak™ Strain Relief Technology represents an innovative
+                        approach to vascular access securement by focusing on the entire catheter
+                        pathway. Traditional securement typically focuses on the catheter hub, leaving
+                        the tubing exposed—where most accidental tension occurs.
+                    </p>
+                    <p class="safetrak-description-para">
+                        SafeTrak™ features a tubing-centric, strain-relief design that targets and
+                        minimizes mechanical stress at the insertion site. This advanced architecture
+                        helps protect against accidental dislodgement and migration, contributing to
+                        improved patient safety, greater comfort, and enhanced care efficiency.
+                    </p>
+                </div>
+
+                <div class="safetrak-image-wrapper">
+                    <img src="img/make different.png" alt="SafeTrak Technology" class="safetrak-featured-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-content-wrapper">
+                <div class="benefits-image-container">
+                    <img src="img/benifit.png" alt="Doctor" class="benefits-doctor-image">
+                </div>
+
+                <div class="benefits-text-area">
+                    <h2 class="benefits-main-heading">The Benefits of Stabilization Devices Like SureSet™</h2>
+                    <p class="benefits-intro-text">
+                        The SureSet™ Safe-Track Strain Relief Technology™ creates a streamlined
+                        system to reliably stabilize the PIV catheter and organize the infusion tubing.
+                    </p>
+
+                    <div class="benefits-stats-container">
+                        <div class="benefits-stat-box shadow">
+                            <h3 class="benefits-stat-number">81% Reduction</h3>
+                            <p class="benefits-stat-description">in unscheduled interruptions<sup>2</sup></p>
+                        </div>
+                        <div class="benefits-stat-box shadow">
+                            <h3 class="benefits-stat-number">42% reduction</h3>
+                            <p class="benefits-stat-description">in complications</p>
+                        </div>
+                        <div class="benefits-stat-box shadow">
+                            <h3 class="benefits-stat-number">33% increase</h3>
+                            <p class="benefits-stat-description">of lifespan of an IV insertion<sup>6</sup></p>
+                        </div>
+                        <div class="benefits-stat-box shadow">
+                            <h3 class="benefits-stat-number">$277,100</h3>
+                            <p class="benefits-stat-description">Potential savings for a 300-bed hospital using 60,000
+                                PIVs per year<sup>4</sup></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducing Section -->
+    <section class="introducing-section">
+        <div class="introducing-container">
+            <div class="introducing-layout-grid">
+                <div class="introducing-left-content">
+                    <h2 class="introducing-main-title">Introducing the SureSet™ Peripheral IV Device</h2>
+                    <p class="introducing-subtitle-text">
+                        Our innovative <strong>Safe-Track Strain Relief Technology™</strong> makes
+                        SureSet™ unlike any other IV securement device.
+                    </p>
+
+                    <ul class="introducing-features-list">
+                        <li class="introducing-feature-item">
+                            <i class="fas fa-check-square introducing-check-icon"></i>
+                            <span class="introducing-feature-text">Provides consistent securement for both the catheter
+                                and tubing</span>
+                        </li>
+                        <li class="introducing-feature-item">
+                            <i class="fas fa-check-square introducing-check-icon"></i>
+                            <span class="introducing-feature-text">Reduces pressure on the indwelling catheter so that
+                                it does not advance or withdraw</span>
+                        </li>
+                        <li class="introducing-feature-item">
+                            <i class="fas fa-check-square introducing-check-icon"></i>
+                            <span class="introducing-feature-text">Allows convenient access to the catheter hub</span>
+                        </li>
+                        <li class="introducing-feature-item">
+                            <i class="fas fa-check-square introducing-check-icon"></i>
+                            <span class="introducing-feature-text">Standardizes management of the tubing without
+                                tape</span>
+                        </li>
+                        <li class="introducing-feature-item">
+                            <i class="fas fa-check-square introducing-check-icon"></i>
+                            <span class="introducing-feature-text">Improves quality of care for patients and reduces
+                                discomfort</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="introducing-right-content">
+                    <div class="introducing-video-container">
+                        <img src="img/peripheral iv device.png" alt="Patient Care" class="introducing-background-image">
+                        <div class="introducing-video-overlay">
+                            <button class="introducing-play-btn">
+                                <i class="fas fa-play introducing-play-icon"></i>
+                            </button>
+                            <span class="introducing-watch-text">Watch Video</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="vas-hero-section">
+        <div class="container">
+            <h1 class="vas-hero-title">A New Approach to Safe, Stable<br>Vascular Access</h1>
+            <p class="vas-hero-subtitle">(Client content, placed after the benefits)</p>
+            <p class="vas-hero-description">
+                SureSet™ SafeTrak™ introduces a solution for vascular access securement using flexible motion-control
+                geometry and a secure, low-profile anchoring system. This proprietary design absorbs tension before it
+                reaches the catheter hub, reducing dislodgement, minimizing micro-motion, and maintaining consistent
+                catheter alignment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="vas-content-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Key Design Features -->
+                <div class="col-lg-6">
+                    <div class="vas-feature-card">
+                        <h2 class="vas-card-title">Key Design Features</h2>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Dynamic strain-relief geometry</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Secure lock channel</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Angled adhesive platform</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Flex-hinge architecture</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Advanced adhesion system</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinical & Operational Advantages -->
+                <div class="col-lg-6">
+                    <div class="vas-feature-card">
+                        <h2 class="vas-card-title">Clinical & Operational<br>Advantages</h2>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Reduced dislodgement and migration</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Lower infection risk</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Greater patient comfort</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Improved workflow efficiency</p>
+                        </div>
+                        <div class="vas-feature-item">
+                            <div class="vas-check-icon"></div>
+                            <p class="vas-feature-text">Cost-effective care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stabilization Section -->
+    <section class="vas-stabilization-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+
+                    <div class="text-center">
+                        <h2 class="vas-stab-title">Improved Stabilization for Safer Vascular Access</h2>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/stabilization.png" width="200" alt="">
+                            </div>
+                            <div class="col-8">
+                                <p class="vas-stab-description">
+                                    SureSet™ helps protect the catheter pathway by absorbing and controlling tubing
+                                    movement. The result is improved stability, reduced complications, and a more
+                                    consistent
+                                    experience for both clinicians and patients.
+                                </p>
+                                <button class="vas-explore-btn">Explore More</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="vas-benefit-card">
+                                <div class="vas-benefit-icon">
+                                    <i class="fas fa-hand-pointer"></i>
+                                </div>
+                                <h3 class="vas-benefit-title">Simple Applications</h3>
+                                <p class="vas-benefit-text">
+                                    SureSet™ is applied to a standard protective dressing, allowing an easy and fast
+                                    setup of the infusion site.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <div class="vas-benefit-card">
+                                <div class="vas-benefit-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h3 class="vas-benefit-title">Easy Site Access</h3>
+                                <p class="vas-benefit-text">
+                                    The clinical care team can conveniently access and manage the infusion site and
+                                    extension tubing.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ms-4">
+                            <div class="vas-benefit-card">
+                                <div class="vas-benefit-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <h3 class="vas-benefit-title">A Consistent</h3>
+                                <p class="vas-benefit-text">
+                                    SureSet's uniform method uses fewer adhesives on the skin, resulting in less
+                                    variability, increased safety, and improved patient comfort and satisfaction.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 mt-4">
+                            <div class="vas-benefit-card">
+                                <div class="vas-benefit-icon">
+                                    <i class="fas fa-hand-sparkles"></i>
+                                </div>
+                                <h3 class="vas-benefit-title">One-Step Removal</h3>
+                                <p class="vas-benefit-text">
+                                    The protective dressing and the device can<strong>One-Step Removal</strong> be
+                                    easily removed together.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="vas-footer">
+        <div class="container">
+            <div class="row vas-footer-top g-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="vas-footer-logo">
+                        <img src="img/SureSet logo.png" width="150" alt="">
+                    </div>
+                    <p class="vas-footer-text">
+                        PN: SSIV-5-US, Rev. 1, Nov. 2025<br>
+                        SureSet and Safe-Track Strain Relief Technology are registered trademarks of Alera Medtech LLC.
+                    </p>
+                    <div class="vas-social-links">
+                        <a href="#" class="vas-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Usefull Links</h3>
+                    <ul class="vas-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="resourses.html">Resources</a></li>
+                        <li><a href="#">Distributors</a></li>
+                        <li><a href="#">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Contact Us</h3>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Address</div>
+                            <p class="vas-contact-value">United States</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Phone</div>
+                            <p class="vas-contact-value">+012 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Email</div>
+                            <p class="vas-contact-value">sureset.info@aleramedtech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vas-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="vas-copyright">© 2025 Alera Medtech LLC. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="vas-footer-bottom-links">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('navbar-menu-active');
+        }
+    </script>
+</body>
+
+</html>

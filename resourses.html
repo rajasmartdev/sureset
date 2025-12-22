@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureSet </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <a href="tel:+1234567890" class="topbar-contact-item">
+                        <i class="fas fa-phone topbar-icon"></i>
+                        <span>+123 456 7890</span>
+                    </a>
+                    <a href="mailto:sureset.info@aleramedtech.com" class="topbar-contact-item">
+                        <i class="fas fa-envelope topbar-icon"></i>
+                        <span>sureset.info@aleramedtech.com</span>
+                    </a>
+                </div>
+                <div class="topbar-right">
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <a href="#" class="navbar-logo-link">
+                    <img src="img/SureSet logo.png" alt="SureSet Logo" class="navbar-logo">
+                </a>
+
+                <button class="navbar-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="navbar-menu-item">
+                        <a href="index.html" class="navbar-menu-link">Home</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="about.html" class="navbar-menu-link">About Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">SafeTrak Technology</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">Products</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="resourses.html" class="navbar-menu-link">Resources</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="contact.html" class="navbar-menu-link">Contact Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-cta-button">Request Evaluation Samples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SUB PAGE HERO SECTION -->
+    <section class="sub-heror d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb sub-hero-breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Resources
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- Page Title -->
+                    <h1 class="sub-hero-title">Resources</h1>
+
+                    <!-- Subtitle -->
+                    <p class="sub-hero-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odit non expedita ab tenetur
+                        tempora blanditiis placeat quos eveniet nihil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="sureset-faq-section">
+        <div class="container">
+            <h2 class="sureset-faq-title">Frequently Asked Questions</h2>
+            <p class="sureset-faq-subtitle">
+                Here are some commonly asked questions about SureSet Securement. If you're looking for additional
+                information, please contact us <a href="#">here</a>.
+            </p>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Is SureSet compatible with all forms of PIV catheters?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Yes, SureSet is designed to be compatible with all standard PIV catheters. The device
+                                accommodates various catheter sizes and types commonly used in clinical settings.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Is the SureSet Peripheral IV stabilization device appropriate for all patients
+                                    with PIVs?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>SureSet is suitable for most patients requiring PIV stabilization. However, individual
+                                patient assessment should be conducted to ensure appropriateness based on skin condition
+                                and clinical needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Any special tips or instructions for fitting the SureSet PIV stabilization device
+                                    onto the catheter?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Follow the provided instructions for use. Ensure the catheter is properly inserted and
+                                secured before applying the SureSet device. The device should fit snugly without causing
+                                discomfort to the patient.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Is SureSet reusable?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>No, SureSet is a single-use device designed for one-time application to maintain
+                                sterility and optimal performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Do the device and catheter have to be removed together?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>No, the SureSet device can be removed independently from the catheter if needed for
+                                assessment or dressing changes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Is SureSet Latex free?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Yes, SureSet is latex-free to minimize the risk of allergic reactions in sensitive
+                                patients.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>If I want to change the tubing, does the device need to be removed?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>No, tubing changes can typically be performed without removing the SureSet device,
+                                allowing for continued stabilization during routine care.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Do I have to use a special skin prep with the SureSet stabilization device?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Follow your facility's standard skin preparation protocols. SureSet is compatible with
+                                commonly used skin prep solutions.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Does SureSet have a version for children and infants?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Please contact us for information about pediatric sizing options and recommendations for
+                                use with children and infants.</p>
+                        </div>
+                    </div>
+
+                    <div class="sureset-faq-item">
+                        <div class="sureset-faq-question">
+                            <div class="d-flex align-items-center">
+                                <span class="sureset-faq-number">&#8599;</span>
+                                <span>Can the SureSet device be placed over insertion sites other than the hand?</span>
+                            </div>
+                            <span class="sureset-faq-toggle">&#8964;</span>
+                        </div>
+                        <div class="sureset-faq-answer">
+                            <p>Yes, SureSet can be used on various PIV insertion sites including the hand, forearm, and
+                                other appropriate locations as determined by clinical assessment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources Section -->
+    <section class="sureset-resources-section">
+        <div class="container">
+            <h2 class="sureset-resources-title">Additional Resources</h2>
+
+            <div class="sureset-resources-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 text-center mb-4 mb-lg-0">
+                        <img src="img/additional resources.png" alt="SureSet Brochure" class="sureset-brochure-image">
+                    </div>
+                    <div class="col-lg-7">
+                        <a href="#" class="sureset-download-link">
+                            <span class="sureset-download-icon"><img src="img/icon-download.png" width="25"
+                                    alt=""></span>
+                            <span>DOWNLOAD OUR PRODUCT BROCHURE</span>
+                        </a>
+                        <a href="#" class="sureset-download-link">
+                            <span class="sureset-download-icon"><img src="img/icon-download.png" width="25"
+                                    alt=""></span>
+                            <span>DOWNLOAD OUR INSTRUCTIONS FOR USE</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="sureset-contact-section">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6">
+                    <img src="img/get in touch.png" alt="IV Hand" class="sureset-contact-image">
+                </div>
+                <div class="col-lg-6"
+                    style="background-image: url('img/bg\ get\ in\ touch.png'); background-size: cover; background-repeat: no-repeat; align-content: center;">
+                    <div class="sureset-contact-content">
+                        <h2 class="sureset-contact-title">
+                            If you have further questions about SureSet Securement, please get in touch.
+                        </h2>
+                        <button class="sureset-contact-button">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.sureset-faq-item').forEach(item => {
+            item.addEventListener('click', function () {
+                // Toggle active class
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="vas-footer">
+        <div class="container">
+            <div class="row vas-footer-top g-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="vas-footer-logo">
+                        <img src="img/SureSet logo.png" width="150" alt="">
+                    </div>
+                    <p class="vas-footer-text">
+                        PN: SSIV-5-US, Rev. 1, Nov. 2025<br>
+                        SureSet and Safe-Track Strain Relief Technology are registered trademarks of Alera Medtech LLC.
+                    </p>
+                    <div class="vas-social-links">
+                        <a href="#" class="vas-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Usefull Links</h3>
+                    <ul class="vas-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="resourses.html">Resources</a></li>
+                        <li><a href="#">Distributors</a></li>
+                        <li><a href="#">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Contact Us</h3>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Address</div>
+                            <p class="vas-contact-value">United States</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Phone</div>
+                            <p class="vas-contact-value">+012 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Email</div>
+                            <p class="vas-contact-value">sureset.info@aleramedtech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vas-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="vas-copyright">© 2025 Alera Medtech LLC. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="vas-footer-bottom-links">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('navbar-menu-active');
+        }
+    </script>
+</body>
+
+</html>

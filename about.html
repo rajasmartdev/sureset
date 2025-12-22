@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SureSet </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <a href="tel:+1234567890" class="topbar-contact-item">
+                        <i class="fas fa-phone topbar-icon"></i>
+                        <span>+123 456 7890</span>
+                    </a>
+                    <a href="mailto:sureset.info@aleramedtech.com" class="topbar-contact-item">
+                        <i class="fas fa-envelope topbar-icon"></i>
+                        <span>sureset.info@aleramedtech.com</span>
+                    </a>
+                </div>
+                <div class="topbar-right">
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="topbar-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-content">
+                <a href="#" class="navbar-logo-link">
+                    <img src="img/SureSet logo.png" alt="SureSet Logo" class="navbar-logo">
+                </a>
+
+                <button class="navbar-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="navbar-menu-item">
+                        <a href="index.html" class="navbar-menu-link">Home</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="about.html" class="navbar-menu-link">About Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">SafeTrak Technology</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-menu-link">Products</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="resourses.html" class="navbar-menu-link">Resources</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="contact.html" class="navbar-menu-link">Contact Us</a>
+                    </li>
+                    <li class="navbar-menu-item">
+                        <a href="#" class="navbar-cta-button">Request Evaluation Samples</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SUB PAGE HERO SECTION -->
+    <section class="sub-hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb sub-hero-breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                About Us
+                            </li>
+                        </ol>
+                    </nav>
+
+                    <!-- Page Title -->
+                    <h1 class="sub-hero-title">About Us</h1>
+
+                    <!-- Subtitle -->
+                    <p class="sub-hero-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odit non expedita ab tenetur
+                        tempora blanditiis placeat quos eveniet nihil.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content-grid">
+                <div class="about-image-wrapper">
+                    <img src="img/rapid different.png" alt="Alera Medtech" class="about-main-image">
+
+                </div>
+
+                <div class="about-text-content">
+                    <h2 class="about-main-title">Alera Medtech:</h2>
+                    <h3 class="about-subtitle">A Radically Different Medical Device Company</h3>
+                    <p class="about-description-text">
+                        Alera Medtech was created with a clear belief: essential medical devices
+                        deserve far more innovation than they have received. Across healthcare,
+                        many widely used devices have changed very little over several decades.
+                        Clinical practice has moved forward, yet the tools clinicians rely on every
+                        day have not kept pace. This creates avoidable complications, unnecessary
+                        costs, and limitations in patient care.
+                    </p>
+                    <p class="about-highlight-text">
+                        Alera exists to overcome these limitations.
+                    </p>
+                    <p class="about-highlight-text">We identify under-innovated, high-impact medical devices and
+                        redesign them using modern engineering, strong intellectual property, and a commitment to
+                        patient access. Our development approach allows rapid and scalable innovation so that improved
+                        devices can reach the market faster and more cost effectively than traditional medical
+                        technology pathways.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: What Makes Alera Different -->
+    <section class="alera-hero-section">
+        <div class="container">
+            <h1 class="alera-section-title">What Makes Alera Different -</h1>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alera-feature-card">
+                        <div class="alera-icon-wrapper">
+                            <img src="img/alera-1.png" alt="">
+                        </div>
+                        <h3 class="alera-feature-title">Innovation Where It Matters Most</h3>
+                        <p class="alera-feature-description">
+                            We focus on devices that are clinically essential and used in high volumes, yet have
+                            remained largely unchanged for years. By concentrating on overlooked categories rather than
+                            emerging trends, Alera creates improvements that benefit large patient populations.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alera-feature-card">
+                        <div class="alera-icon-wrapper">
+                            <img src="img/alera-2.svg" alt="">
+                        </div>
+                        <h3 class="alera-feature-title">Rapid and Scalable Development</h3>
+                        <p class="alera-feature-description">
+                            Alera uses streamlined design, engineering, and manufacturing processes that compress
+                            development timelines while maintaining quality and regulatory rigor. This model allows us
+                            to deliver significant advancements in a fraction
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alera-feature-card">
+                        <div class="alera-icon-wrapper">
+                            <img src="img/alera-3.png" alt="">
+                        </div>
+                        <h3 class="alera-feature-title">Intellectual Property as a Strategic Foundation</h3>
+                        <p class="alera-feature-description">
+                            Most Alera products are protected by strong patents and proprietary design architectures.
+                            Intellectual property is central to our strategy and ensures consistent differentiation for
+                            clinicians, patients, and partners who rely on our solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="alera-feature-card">
+                        <div class="alera-icon-wrapper">
+                            <img src="img/alera-4.png" alt="">
+                        </div>
+                        <h3 class="alera-feature-title">Innovation That Remains Affordable</h3>
+                        <p class="alera-feature-description">
+                            Alera is committed to ensuring that improved performance never results in higher financial
+                            burden for patients or healthcare systems. Our engineering priorities support clinical
+                            value, operational efficiency, and cost sustainability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="nt-container mb-5">
+        <!-- Header Section -->
+        <h1 class="nt-main-title">What We Build</h1>
+        <p class="nt-subtitle">
+            Alera focuses on modernizing essential devices in three core clinical categories. Each product family is
+            built with a commitment to safety, usability, and meaningful technological advancement.
+        </p>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nt-nav-tabs" id="productTabs" role="tablist">
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nt-nav-link active w-100" id="vascular-tab" data-bs-toggle="tab"
+                    data-bs-target="#vascular" type="button" role="tab" aria-controls="vascular" aria-selected="true">
+                    Vascular Access
+                </button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nt-nav-link w-100" id="neurology-tab" data-bs-toggle="tab" data-bs-target="#neurology"
+                    type="button" role="tab" aria-controls="neurology" aria-selected="false">
+                    Neurology
+                </button>
+            </li>
+            <li class="nav-item flex-fill" role="presentation">
+                <button class="nt-nav-link w-100" id="urology-tab" data-bs-toggle="tab" data-bs-target="#urology"
+                    type="button" role="tab" aria-controls="urology" aria-selected="false">
+                    Urology
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="productTabsContent">
+            <!-- Vascular Access Tab -->
+            <div class="tab-pane fade show active" id="vascular" role="tabpanel" aria-labelledby="vascular-tab">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="nt-section-title">Vascular Access</h2>
+                        <p class="nt-section-description">
+                            Alera develops advanced securement and infusion solutions designed to reduce complications
+                            and improve workflow efficiency.
+                        </p>
+                        <p class="nt-portfolio-title">Our vascular access portfolio includes:</p>
+
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-name">SureSet Securement Systems</div>
+                                <div class="nt-product-description">
+                                    featuring SafeTrak Strain Relief Technology for tubing and catheter stability
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-name">Dermaflush and Duoflush next-generation saline flush
+                                    syringes</div>
+                                <div class="nt-product-description">
+                                    designed for safety, performance, and ease of use
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="nt-closing-text">
+                            These solutions help prevent dislodgement and migration while preventing infections,
+                            supporting comfort and enhancing clinical efficiency.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/vascular access.png" alt="Vascular Access Medical Procedure"
+                            class="nt-product-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Neurology Tab -->
+            <div class="tab-pane fade" id="neurology" role="tabpanel" aria-labelledby="neurology-tab">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="nt-section-title">Neurology</h2>
+                        <p class="nt-section-description">
+                            Content for Neurology products will be displayed here.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop"
+                            alt="Neurology" class="nt-product-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Urology Tab -->
+            <div class="tab-pane fade" id="urology" role="tabpanel" aria-labelledby="urology-tab">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="nt-section-title">Urology</h2>
+                        <p class="nt-section-description">
+                            Content for Urology products will be displayed here.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=600&fit=crop"
+                            alt="Urology" class="nt-product-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2: Our Philosophy -->
+    <section class="alera-philosophy-section">
+        <div class="container">
+            <h2 class="alera-philosophy-title">Our Philosophy</h2>
+            <p class="alera-philosophy-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="alera-philosophy-card d-flex">
+                        <div>
+                            <img src="img/icon-abt-1.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="alera-philosophy-card-title">
+                                Simplicity First
+                            </h3>
+                            <p class="alera-philosophy-card-text">Devices should support clinicians and simplify care.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="alera-philosophy-card d-flex">
+                        <div>
+                            <img src="img/icon-abt-2.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="alera-philosophy-card-title">
+                                Protect the Patient
+                            </h3>
+                            <p class="alera-philosophy-card-text">Safety and comfort guide every design decision.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="alera-philosophy-card d-flex">
+                        <div>
+                            <img src="img/icon-abt-3.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="alera-philosophy-card-title">
+                                Intellectual Property With Purpose
+                            </h3>
+                            <p class="alera-philosophy-card-text">IP should represent real clinical value and functional
+                                advancement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="alera-philosophy-card d-flex">
+                        <div>
+                            <img src="img/icon-abt-4.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="alera-philosophy-card-title">
+                                Access for All
+                            </h3>
+                            <p class="alera-philosophy-card-text">Innovation is only meaningful when patients can afford
+                                it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Commitment -->
+    <section class="alera-commitment-section">
+        <div class="container text-center">
+            <h2 class="alera-commitment-title">Our Commitment</h2>
+            <p class="alera-commitment-text">
+                Alera Medtech collaborates with clinicians, researchers, and healthcare systems to solve practical
+                challenges with engineering that is focused, efficient, and human centered. Our success is measured in
+                clinical impact, ease of use, and improved patient experiences.
+            </p>
+            <p class="alera-commitment-text">
+                Alera is proud to be a company that moves quickly, thinks differently, and invents with purpose.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="vas-footer">
+        <div class="container">
+            <div class="row vas-footer-top g-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="vas-footer-logo">
+                        <img src="img/SureSet logo.png" width="150" alt="">
+                    </div>
+                    <p class="vas-footer-text">
+                        PN: SSIV-5-US, Rev. 1, Nov. 2025<br>
+                        SureSet and Safe-Track Strain Relief Technology are registered trademarks of Alera Medtech LLC.
+                    </p>
+                    <div class="vas-social-links">
+                        <a href="#" class="vas-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="vas-social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Usefull Links</h3>
+                    <ul class="vas-footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="resourses.html">Resources</a></li>
+                        <li><a href="#">Distributors</a></li>
+                        <li><a href="#">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h3 class="vas-footer-section-title">Contact Us</h3>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Address</div>
+                            <p class="vas-contact-value">United States</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Phone</div>
+                            <p class="vas-contact-value">+012 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="vas-contact-item">
+                        <div class="vas-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="vas-contact-label">Email</div>
+                            <p class="vas-contact-value">sureset.info@aleramedtech.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vas-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="vas-copyright">© 2025 Alera Medtech LLC. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="vas-footer-bottom-links">
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navbarMenu');
+            menu.classList.toggle('navbar-menu-active');
+        }
+    </script>
+</body>
+
+</html>
