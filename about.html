@@ -63,7 +63,7 @@
                         <a href="about.html" class="navbar-menu-link">About Us</a>
                     </li>
                     <li class="navbar-menu-item">
-                        <a href="#" class="navbar-menu-link">SafeTrak Technology</a>
+                        <a href="safetrak-technology.html" class="navbar-menu-link">SafeTrak Technology</a>
                     </li>
                     <li class="navbar-menu-item">
                         <a href="#" class="navbar-menu-link">Products</a>
@@ -75,12 +75,328 @@
                         <a href="contact.html" class="navbar-menu-link">Contact Us</a>
                     </li>
                     <li class="navbar-menu-item">
-                        <a href="#" class="navbar-cta-button">Request Evaluation Samples</a>
+                        <button class="navbar-cta-button" id="openModalBtn">Request Evaluation Samples</button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Modal Overlay (shared) -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-container">
+            <button class="close-btn" id="closeModalBtn" aria-label="Close"></button>
+
+            <div class="form-header">
+                <h1 id="headerTitle">Request Evaluation Samples</h1>
+                <p id="headerSubtitle">Complete the form below to receive SureSet™ evaluation samples</p>
+            </div>
+
+            <div class="form-body">
+                <div class="form-content" id="formContent">
+                    <form id="evaluationForm" novalidate>
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullNameError">Please enter your full name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Work Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError">Please enter a valid work email address</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="designation">Designation <span class="required">*</span></label>
+                            <input type="text" id="designation" name="designation" required
+                                placeholder="e.g., Nurse Manager, Physician, Clinical Director">
+                            <span class="error-message" id="designationError">Please enter your designation</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Department <span class="required">*</span></label>
+                            <input type="text" id="department" name="department" required
+                                placeholder="e.g., Emergency, ICU, Cardiology">
+                            <span class="error-message" id="departmentError">Please enter your department</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="facilityName">Hospital/Clinic Name <span class="required">*</span></label>
+                            <input type="text" id="facilityName" name="facilityName" required>
+                            <span class="error-message" id="facilityNameError">Please enter your hospital or clinic
+                                name</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productType">Product Type <span class="required">*</span></label>
+                            <select id="productType" name="productType" required>
+                                <option value="">-- Select Product Type --</option>
+                                <option value="sureset-peripheral-iv">SureSet™ Peripheral IV Securement Device</option>
+                                <option value="sureset-picc">SureSet™ PICC Line Securement</option>
+                                <option value="sureset-central-line">SureSet™ Central Line Securement</option>
+                                <option value="sureset-dialysis">SureSet™ Dialysis Catheter Securement</option>
+                                <option value="multiple">Multiple Products</option>
+                            </select>
+                            <span class="error-message" id="productTypeError">Please select a product type</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+                            <span class="error-message" id="phoneError">Please enter a valid phone number</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estimatedVolume">Estimated Monthly Volume</label>
+                            <input type="text" id="estimatedVolume" name="estimatedVolume"
+                                placeholder="e.g., 500 units">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalInfo">Additional Information</label>
+                            <textarea id="additionalInfo" name="additionalInfo"
+                                placeholder="Please share any specific requirements or questions..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit Request</button>
+                    </form>
+                </div>
+
+                <div class="thank-you-content" id="thankYouContent">
+                    <div class="thank-you-icon">
+                        <div class="checkmark"></div>
+                    </div>
+                    <h2>Thank You!</h2>
+                    <p>Your request has been submitted successfully. Our team will contact you within 24-48 hours.</p>
+
+                    <div class="download-section">
+                        <h3>📄 Download Product Information</h3>
+                        <div class="download-buttons">
+                            <a href="pdf/Sureset_Vascular Acess Safety.pdf" class="download-btn secondary-btn"
+                                target="_blank">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                                Download Full Product Catalog
+                            </a>
+                        </div>
+                    </div>
+
+                    <button class="submit-btn" id="closeThankYou">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modalOverlay');
+        const openBtn = document.getElementById('openModalBtn');
+        const closeBtn = document.getElementById('closeModalBtn');
+        const form = document.getElementById('evaluationForm');
+        const formContent = document.getElementById('formContent');
+        const thankYouContent = document.getElementById('thankYouContent');
+        const headerTitle = document.getElementById('headerTitle');
+        const headerSubtitle = document.getElementById('headerSubtitle');
+        const invalidEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com', 'icloud.com', 'mail.com', 'protonmail.com', 'yandex.com', 'zoho.com'];
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            showForm();
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        function showForm() {
+            formContent.classList.remove('hidden');
+            thankYouContent.classList.remove('active');
+            headerTitle.textContent = 'Request Evaluation Samples';
+            headerSubtitle.textContent = 'Complete the form below to receive SureSet™ evaluation samples';
+        }
+
+        function showThankYou() {
+            formContent.classList.add('hidden');
+            thankYouContent.classList.add('active');
+            headerTitle.textContent = 'Request Submitted!';
+            headerSubtitle.textContent = 'Access your resources below';
+            document.querySelector('.modal-container').scrollTop = 0;
+        }
+
+        document.getElementById('closeThankYou').addEventListener('click', () => {
+            closeModal();
+            setTimeout(() => {
+                showForm();
+                form.reset();
+            }, 300);
+        });
+
+        function validateEmail(email) {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                return { valid: false, message: 'Please enter a valid email address' };
+            }
+
+            const domain = email.split('@')[1].toLowerCase();
+            if (invalidEmailDomains.includes(domain)) {
+                return { valid: false, message: 'Please use a work email address. Personal email domains (Gmail, Yahoo, Hotmail, etc.) are not accepted' };
+            }
+
+            return { valid: true };
+        }
+
+        function validatePhone(phone) {
+            const phonePattern = /^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/;
+            return phonePattern.test(phone.replace(/\s/g, ''));
+        }
+
+        function showError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(fieldId + 'Error');
+            field.classList.add('error');
+            errorElement.textContent = message;
+            errorElement.classList.add('show');
+        }
+
+        function clearError(fieldId) {
+            const field = document.getElementById(fieldId);
+            const errorElement = document.getElementById(fieldId + 'Error');
+            field.classList.remove('error');
+            errorElement.classList.remove('show');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('email').addEventListener('blur', function () {
+                const email = this.value.trim();
+                if (email) {
+                    const validation = validateEmail(email);
+                    if (!validation.valid) {
+                        showError('email', validation.message);
+                    } else {
+                        clearError('email');
+                    }
+                }
+            });
+
+            document.getElementById('phone').addEventListener('blur', function () {
+                const phone = this.value.trim();
+                if (phone && !validatePhone(phone)) {
+                    showError('phone', 'Please enter a valid phone number');
+                } else if (phone) {
+                    clearError('phone');
+                }
+            });
+
+            form.querySelectorAll('input, select, textarea').forEach(field => {
+                field.addEventListener('input', function () {
+                    clearError(this.id);
+                });
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                let isValid = true;
+
+                const fullName = document.getElementById('fullName').value.trim();
+                if (!fullName) {
+                    showError('fullName', 'Please enter your full name');
+                    isValid = false;
+                } else {
+                    clearError('fullName');
+                }
+
+                const email = document.getElementById('email').value.trim();
+                const emailValidation = validateEmail(email);
+                if (!email || !emailValidation.valid) {
+                    showError('email', emailValidation.message || 'Please enter a valid work email address');
+                    isValid = false;
+                } else {
+                    clearError('email');
+                }
+
+                const designation = document.getElementById('designation').value.trim();
+                if (!designation) {
+                    showError('designation', 'Please enter your designation');
+                    isValid = false;
+                } else {
+                    clearError('designation');
+                }
+
+                const department = document.getElementById('department').value.trim();
+                if (!department) {
+                    showError('department', 'Please enter your department');
+                    isValid = false;
+                } else {
+                    clearError('department');
+                }
+
+                const facilityName = document.getElementById('facilityName').value.trim();
+                if (!facilityName) {
+                    showError('facilityName', 'Please enter your hospital or clinic name');
+                    isValid = false;
+                } else {
+                    clearError('facilityName');
+                }
+
+                const productType = document.getElementById('productType').value;
+                if (!productType) {
+                    showError('productType', 'Please select a product type');
+                    isValid = false;
+                } else {
+                    clearError('productType');
+                }
+
+                const phone = document.getElementById('phone').value.trim();
+                if (!phone || !validatePhone(phone)) {
+                    showError('phone', 'Please enter a valid phone number');
+                    isValid = false;
+                } else {
+                    clearError('phone');
+                }
+
+                if (isValid) {
+                    console.log('Form submitted successfully!', {
+                        fullName,
+                        email,
+                        designation,
+                        department,
+                        facilityName,
+                        productType,
+                        phone,
+                        estimatedVolume: document.getElementById('estimatedVolume').value.trim(),
+                        additionalInfo: document.getElementById('additionalInfo').value.trim()
+                    });
+
+                    showThankYou();
+                } else {
+                    const firstError = form.querySelector('.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+        });
+    </script>
 
     <!-- SUB PAGE HERO SECTION -->
     <section class="sub-hero d-flex align-items-center">
@@ -291,11 +607,39 @@
                     <div class="col-lg-6">
                         <h2 class="nt-section-title">Neurology</h2>
                         <p class="nt-section-description">
-                            Content for Neurology products will be displayed here.
+                            Cernode range of neurology products support accurate and reliable neurodiagnostic recording and monitoring. Our solutions include:
+                        </p>
+
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">Hypodermic needle electrodes</div>
+                            </div>
+                        </div>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">EEG electrodes</div>
+                            </div>
+                        </div>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">EMG electrodes</div>
+                            </div>
+                        </div>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">IONM electrodes and accessories</div>
+                            </div>
+                        </div>
+                        <p class="nt-closing-text">
+                            Each device is engineered for consistent signal capture, user-friendly application, and patient comfort.
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=600&fit=crop"
+                        <img src="img/nuerogy.jpeg"
                             alt="Neurology" class="nt-product-image">
                     </div>
                 </div>
@@ -307,11 +651,32 @@
                     <div class="col-lg-6">
                         <h2 class="nt-section-title">Urology</h2>
                         <p class="nt-section-description">
-                            Content for Urology products will be displayed here.
+                            Alera’s nxtcath range of urology products advance urinary care through devices that improve securement, comfort, and durability. Our urology portfolio includes:
+                        </p>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">Male external incontinence devices</div>
+                            </div>
+                        </div>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">Urine collection systems including leg bags, drainage bags, and accessories</div>
+                            </div>
+                        </div>
+                        <div class="nt-product-item d-flex align-items-start">
+                            <input type="checkbox" checked>
+                            <div>
+                                <div class="nt-product-namez">Catheter anchoring devices designed for stability and skin friendliness</div>
+                            </div>
+                        </div>
+                        <p class="nt-closing-text">
+                            This category addresses long-standing clinical challenges through modern materials and thoughtful engineering.
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&h=600&fit=crop"
+                        <img src="img/urology.jpeg"
                             alt="Urology" class="nt-product-image">
                     </div>
                 </div>
