@@ -17,11 +17,11 @@
         }
 
         .carousel-item {
-            height: 100vh;
+            height: auto;
         }
 
         .hero-content {
-            height: 100%;
+            height: auto;
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
@@ -411,14 +411,14 @@
         }
 
         .hero-container {
-            max-width: 1200px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 15px;
         }
 
         .hero-content-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.3fr 1fr;
             gap: 60px;
             align-items: center;
         }
@@ -587,7 +587,7 @@
         }
 
         .about-container {
-            max-width: 1200px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -770,7 +770,7 @@
         }
 
         .safetrak-container {
-            max-width: 1200px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -829,7 +829,7 @@
         }
 
         .benefits-container {
-            max-width: 1200px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -849,7 +849,7 @@
         .benefits-doctor-image {
             position: relative;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             height: auto;
             z-index: 1;
             display: block;
