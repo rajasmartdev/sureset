@@ -417,8 +417,8 @@
 
         .hero-content-wrapper {
             display: grid;
-            grid-template-columns: 1.3fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 90px;
             align-items: center;
         }
 
@@ -581,7 +581,7 @@
 
         /* About Section Styles */
         .about-section {
-            padding: 100px 0;
+            padding: 30px 0;
             background-color: #ffffff;
         }
 
@@ -776,7 +776,7 @@
 
         .safetrak-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
 
         .safetrak-main-title {
@@ -805,7 +805,7 @@
         }
 
         .safetrak-description-para {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
             line-height: 1.8;
         }
@@ -817,8 +817,6 @@
         .safetrak-featured-image {
             width: 100%;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         /* Benefits Section Styles */
@@ -869,7 +867,7 @@
         }
 
         .benefits-intro-text {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
             line-height: 1.7;
             margin-bottom: 40px;
@@ -916,8 +914,8 @@
 
         /* Introducing Section Styles */
         .introducing-section {
-            padding: 50px 0;
-            background-color: #ffffff;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #E3E9FF 0%, #ffffff 100%);
         }
 
         .introducing-container {
@@ -1941,7 +1939,7 @@
         .nt-subtitle {
             color: #6c757d;
             font-size: 1.1rem;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
 
@@ -1950,7 +1948,7 @@
             background: #0d6efd;
             border-radius: 8px;
             padding: 8px;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .nt-nav-tabs .nt-nav-link {
@@ -2035,8 +2033,6 @@
         .nt-product-image {
             width: 100%;
             object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -2073,7 +2069,7 @@
         .alera-feature-card {
             background: white;
             border-radius: 8px;
-            padding: 30px;
+            padding: 10px 30px;
             height: 100%;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border-left: 5px solid #7fa3ea;
@@ -2102,7 +2098,7 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/abt-bg.png');
             background-size: cover;
             background-position: center;
-            padding: 80px 0;
+            padding: 40px 0;
             color: white;
         }
 
@@ -2149,22 +2145,22 @@
 
         .alera-commitment-section {
             background: white;
-            padding: 80px 0;
+            padding: 40px 0;
         }
 
         .alera-commitment-title {
             color: #0056ff;
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .alera-commitment-text {
             color: #6b7280;
             font-size: 1.05rem;
             line-height: 1.8;
-            max-width: 1000px;
-            margin: 0 auto 30px;
+            max-width: 1200px;
+            margin: 0 auto 10px;
         }
 
         .sureset-faq-section {
@@ -2345,12 +2341,12 @@
         }
 
         .sureset-hero-section {
-            padding: 60px 20px;
+            padding: 20px 20px;
             background-color: #ffffff;
         }
 
         .sureset-title-main {
-            font-size: 3.5rem;
+            font-size: 40px;
             font-weight: 700;
             color: #0d6efd;
             text-align: center;
@@ -2359,17 +2355,17 @@
         }
 
         .sureset-subtitle-text {
-            font-size: 1.5rem;
-            color: #0d6efd;
+            font-size: 20px;
+            color: #6b7280;
             text-align: center;
             line-height: 1.6;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             font-weight: 400;
         }
 
         .sureset-headquarters-section {
-            padding: 60px 20px;
+            padding: 30px 20px;
             background-color: #ffffff;
         }
 
@@ -2666,7 +2662,7 @@
         /* Second Section Styles */
         .safetrak-advantages-section {
             background-color: #ffffff;
-            padding: 80px 0;
+            padding: 40px 0 20px 0;
         }
 
         .safetrak-advantages-title {
@@ -2845,7 +2841,7 @@
 
         .vascular-section-title {
             color: #0056d2;
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
             line-height: 1.15;
             margin-bottom: 30px;
@@ -2860,7 +2856,7 @@
 
         .vascular-commitment-title {
             color: #0056d2;
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 700;
             line-height: 1.15;
             margin-bottom: 30px;
@@ -3001,5 +2997,157 @@
 
             .vascular-image-column {
                 padding: 0 20px 40px 20px;
+            }
+        }
+
+        /* Privacy Policy Styles */
+        .privacy-policy-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            min-height: calc(100vh - 500px);
+        }
+
+        .privacy-policy-title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #0050ff;
+            margin-bottom: 50px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .privacy-policy-body {
+            background-color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            line-height: 1.8;
+        }
+
+        .privacy-policy-intro {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .privacy-policy-section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0050ff;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .privacy-policy-body p {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .privacy-policy-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .privacy-policy-list li {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .privacy-policy-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #0050ff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .privacy-policy-contact {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+
+        .privacy-policy-contact a {
+            color: #0050ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .privacy-policy-contact a:hover {
+            text-decoration: underline;
+            color: #003399;
+        }
+
+        .privacy-policy-closing {
+            font-size: 16px;
+            color: #333333;
+            font-weight: 600;
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid #e8f4f8;
+        }
+
+        @media (max-width: 768px) {
+            .privacy-policy-section {
+                padding: 60px 0;
+            }
+
+            .privacy-policy-title {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            .privacy-policy-body {
+                padding: 30px 25px;
+            }
+
+            .privacy-policy-section-title {
+                font-size: 20px;
+            }
+
+            .privacy-policy-body p,
+            .privacy-policy-list li {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .privacy-policy-section {
+                padding: 40px 0;
+            }
+
+            .privacy-policy-title {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .privacy-policy-body {
+                padding: 20px 15px;
+            }
+
+            .privacy-policy-section-title {
+                font-size: 18px;
+                margin-top: 25px;
+                margin-bottom: 12px;
+            }
+
+            .privacy-policy-body p,
+            .privacy-policy-list li {
+                font-size: 14px;
+            }
+
+            .privacy-policy-list li {
+                padding-left: 25px;
             }
         }
