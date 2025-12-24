@@ -544,9 +544,8 @@
                 </div>
 
                 <div class="hero-right-content">
-                    <a href="#">
+                    <a href="#" class="watch-video-link" data-video="https://suresetsecure.com/wp-content/uploads/2025/11/SureSet-gif-SD-480p-udated-logo.mp4">
                         <img src="img/about.png" alt="SureSet Product" class="hero-product-image">
-
                     </a>
                 </div>
             </div>
@@ -693,10 +692,12 @@
                     <div class="introducing-video-container">
                         <img src="img/peripheral iv device.png" alt="Patient Care" class="introducing-background-image">
                         <div class="introducing-video-overlay">
-                            <button class="introducing-play-btn">
-                                <i class="fas fa-play introducing-play-icon"></i>
-                            </button>
-                            <span class="introducing-watch-text">Watch Video</span>
+                            <a style="display: contents;" href="#" class="watch-video-link" data-video="https://suresetsecure.com/wp-content/uploads/2022/03/suresetVideo_01_a.mp4">
+                                    <button class="introducing-play-btn">
+                                    <i class="fas fa-play introducing-play-icon"></i>
+                                </button>
+                                <span class="introducing-watch-text">Watch Video</span>
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -943,12 +944,73 @@
         </div>
     </footer>
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal" aria-hidden="true" style="display:none;">
+        <div class="video-modal-overlay" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1050;display:flex;align-items:center;justify-content:center;">
+            <div class="video-modal-container" role="dialog" aria-modal="true" style="background:#000;border-radius:8px;max-width:90%;width:900px;max-height:90%;overflow:hidden;position:relative;">
+                <button id="videoModalClose" aria-label="Close video" style="position:absolute;right:10px;top:8px;z-index:2;background:transparent;border:none;color:#fff;font-size:28px;cursor:pointer;">&times;</button>
+                <video id="modalVideo" controls playsinline style="width:100%;height:100%;display:block;background:#000;">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
         function toggleMenu() {
             const menu = document.getElementById('navbarMenu');
             menu.classList.toggle('navbar-menu-active');
         }
+
+        // Video modal behavior
+        (function () {
+            const links = document.querySelectorAll('.watch-video-link');
+            const modal = document.getElementById('videoModal');
+            const overlay = modal && modal.querySelector('.video-modal-overlay');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeBtn = document.getElementById('videoModalClose');
+
+            function openModal(src) {
+                if (!modal) return;
+                const source = modalVideo.querySelector('source');
+                source.src = src;
+                modalVideo.load();
+                modal.style.display = 'block';
+                modal.setAttribute('aria-hidden', 'false');
+                try { modalVideo.play(); } catch (e) {}
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modalVideo.pause();
+                try { modalVideo.currentTime = 0; } catch (e) {}
+                const source = modalVideo.querySelector('source');
+                source.src = '';
+                modalVideo.load();
+                modal.style.display = 'none';
+                modal.setAttribute('aria-hidden', 'true');
+            }
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const src = this.getAttribute('data-video');
+                    if (src) openModal(src);
+                });
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+            if (overlay) overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeModal();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && modal && modal.style.display === 'block') closeModal();
+            });
+        })();
     </script>
 </body>
 
