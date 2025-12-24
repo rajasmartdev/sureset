@@ -44,7 +44,7 @@
         .text-content h1 {
             font-size: 3rem;
             font-weight: 900;
-            color: #0050ff;
+            color: #003BF2;
             line-height: 1.1;
             margin-bottom: 30px;
             letter-spacing: 2px;
@@ -59,7 +59,7 @@
         }
 
         .cta-button {
-            background-color: #0050ff;
+            background-color: #003BF2;
             color: white;
             padding: 15px 35px;
             font-size: 1rem;
@@ -125,7 +125,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background-color: #0050ff;
+            background-color: #003BF2;
             opacity: 0.5;
             transition: all 0.3s ease;
         }
@@ -218,7 +218,7 @@
         }
 /* Topbar Styles */
         .topbar {
-            background-color: #0d28ff;
+            background-color: #003BF2;
             padding: 12px 0;
         }
         
@@ -319,7 +319,7 @@
         }
         
         .navbar-menu-link:hover {
-            color: #0d28ff;
+            color: #003BF2;
         }
         
         .navbar-cta-button {
@@ -335,7 +335,7 @@
         }
         
         .navbar-cta-button:hover {
-            background-color: #0d28ff;
+            background-color: #003BF2;
             color: white;
         }
         
@@ -428,8 +428,8 @@
 
         .hero-badge {
             display: inline-block;
-            border: 2px solid #0d28ff;
-            color: #0d28ff;
+            border: 2px solid #003BF2;
+            color: #003BF2;
             padding: 8px 24px;
             border-radius: 25px;
             font-size: 14px;
@@ -441,7 +441,7 @@
         .hero-main-heading {
             font-size: 40px;
             font-weight: 700;
-            color: #0d28ff;
+            color: #003BF2;
             line-height: 1.2;
             margin-bottom: 20px;
         }
@@ -475,7 +475,7 @@
         }
 
         .hero-stat-icon {
-            color: #0d28ff;
+            color: #003BF2;
             margin-bottom: 15px;
         }
 
@@ -487,7 +487,7 @@
         }
 
         .hero-cta-button {
-            background-color: #0d28ff;
+            background-color: #003BF2;
             color: white;
             padding: 14px 40px;
             border-radius: 8px;
@@ -500,7 +500,7 @@
         }
 
         .hero-cta-button:hover {
-            background-color: #0a20cc;
+            background-color: #003BF2;
             color: white;
         }
 
@@ -638,7 +638,7 @@
         .about-main-title {
             font-size: 40px;
             font-weight: 700;
-            color: #0d28ff;
+            color: #003BF2;
             line-height: 1.3;
             margin-bottom: 15px;
         }
@@ -646,23 +646,22 @@
         .about-subtitle {
             font-size: 36px;
             font-weight: 500;
-            color: #0d28ff;
+            color: #003BF2;
             line-height: 1.3;
             margin-bottom: 30px;
         }
 
         .about-description-text {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
             line-height: 1.8;
             margin-bottom: 15px;
         }
 
         .about-highlight-text {
-            font-size: 16px;
+            font-size: 18px;
             color: #6b7280;
             line-height: 1.8;
-            font-weight: 500;
         }
 
         /* Responsive Styles */
@@ -861,7 +860,7 @@
         .benefits-main-heading {
             font-size: 40px;
             font-weight: 700;
-            color: #0d28ff;
+            color: #003BF2;
             line-height: 1.3;
             margin-bottom: 20px;
         }
@@ -899,7 +898,7 @@
         .benefits-stat-number {
             font-size: 20px;
             font-weight: 500;
-            color: #0d28ff;
+            color: #003BF2;
             margin-bottom: 10px;
             text-align: center;
         }
@@ -938,7 +937,7 @@
         .introducing-main-title {
             font-size: 42px;
             font-weight: 700;
-            color: #0d28ff;
+            color: #003BF2;
             line-height: 1.3;
             margin-bottom: 20px;
         }
@@ -967,7 +966,7 @@
 
         .introducing-check-icon {
             font-size: 20px;
-            color: #0d28ff;
+            color: #003BF2;
             flex-shrink: 0;
             margin-top: 2px;
         }
@@ -1095,7 +1094,7 @@
                         url('../img/bg\ img.png');
             background-size: cover;
             background-position: center;
-            padding: 80px 0 250px;
+            padding: 50px 0 250px;
             color: white;
             text-align: center;
         }
@@ -1137,7 +1136,7 @@
         }
 
         .vas-card-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 30px;
@@ -1153,7 +1152,7 @@
         .vas-check-icon {
             width: 20px;
             height: 20px;
-            background-color: #0d6efd;
+            background-color: #003BF2;
             border-radius: 4px;
             display: flex;
             align-items: center;
@@ -1195,14 +1194,15 @@
         .vas-stabilization-section {
             background: url(../img/home-bg.png),
                         linear-gradient(135deg, #fff 0%, #ffffff 100%), no-repeat;
-            padding: 80px 0;
+            padding: 40px 0;
         }
 
         .vas-stab-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 30px;
+            text-align: left;
         }
 
         .vas-stab-image-wrapper {
@@ -1222,9 +1222,9 @@
 
         .vas-stab-description {
             color: #6c757d;
-            font-size: 1.1rem;
+            font-size: 18px;
             line-height: 1.8;
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: justify;
         }
 
@@ -1247,7 +1247,7 @@
 
         .vas-benefit-card {
             background: white;
-            padding: 30px;
+            padding: 15px 30px;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
             margin-bottom: 25px;
@@ -1273,19 +1273,19 @@
 
         .vas-benefit-icon i {
             font-size: 24px;
-            color: #0d6efd;
+            color: #003BF2;
         }
 
         .vas-benefit-title {
-            color: #0d6efd;
-            font-size: 1.3rem;
+            color: #003BF2;
+            font-size: 18px;
             font-weight: 700;
             margin-bottom: 10px;
         }
 
         .vas-benefit-text {
             color: #6c757d;
-            font-size: 1rem;
+            font-size: 14px;
             line-height: 1.6;
             margin: 0;
         }
@@ -1298,7 +1298,7 @@
 
 
         .vas-footer-logo {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 20px;
@@ -1337,13 +1337,13 @@
         }
 
         .vas-social-link:hover {
-            background-color: #0d6efd;
+            background-color: #003BF2;
             color: white;
             transform: translateY(-3px);
         }
 
         .vas-footer-section-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 20px;
@@ -1388,12 +1388,12 @@
         }
 
         .vas-contact-icon i {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 18px;
         }
 
         .vas-contact-label {
-            color: #0d6efd;
+            color: #003BF2;
             font-weight: 700;
             font-size: 1.1rem;
             margin-bottom: 5px;
@@ -1406,7 +1406,7 @@
         }
 
         .vas-footer-bottom {
-            background-color: #0d6efd;
+            background-color: #003BF2;
             padding: 20px 0;
             margin-top: 40px;
         }
@@ -1925,12 +1925,13 @@
         }
 
         .nt-container {
-            max-width: 1250px;
+            max-width: 90%;
             margin: 0 auto;
+            padding-top: 30px;
         }
 
         .nt-main-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-weight: 700;
             font-size: 3rem;
             margin-bottom: 20px;
@@ -1972,7 +1973,7 @@
         }
 
         .nt-section-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-weight: 700;
             font-size: 2.5rem;
             margin-bottom: 25px;
@@ -1996,15 +1997,15 @@
         }
 
         .nt-product-item input[type="checkbox"] {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             margin-right: 12px;
-            accent-color: #0d6efd;
+            accent-color: #003BF2;
             flex-shrink: 0;
         }
 
         .nt-product-name {
-            color: #0d6efd;
+            color: #003BF2;
             font-weight: 600;
             font-size: 1.05rem;
             margin-bottom: 5px;
@@ -2055,12 +2056,12 @@
         }
 
         .alera-hero-section {
-            background-color: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
-            padding: 60px 0;
+            background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+            padding: 30px 0;
         }
 
         .alera-section-title {
-            color: #0056ff;
+            color: #003BF2;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 50px;
@@ -2077,7 +2078,7 @@
         }
 
         .alera-icon-wrapper {
-            color: #0056ff;
+            color: #003BF2;
             font-size: 3rem;
             margin-bottom: 20px;
         }
@@ -2124,7 +2125,7 @@
         }
 
         .alera-philosophy-card-title {
-            color: #0056ff;
+            color: #003BF2;
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 10px;
@@ -2134,7 +2135,7 @@
         }
 
         .alera-philosophy-card-icon {
-            color: #0056ff;
+            color: #003BF2;
             font-size: 2rem;
         }
 
@@ -2149,7 +2150,7 @@
         }
 
         .alera-commitment-title {
-            color: #0056ff;
+            color: #003BF2;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
@@ -2165,11 +2166,11 @@
 
         .sureset-faq-section {
             background-color: #f8f9fa;
-            padding: 60px 0;
+            padding: 30px 0;
         }
 
         .sureset-faq-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
@@ -2211,7 +2212,7 @@
         }
 
         .sureset-faq-number {
-            background-color: #0d6efd;
+            background-color: #003BF2;
             color: white;
             border-radius: 50%;
             width: 30px;
@@ -2225,7 +2226,7 @@
         }
 
         .sureset-faq-toggle {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 1.2rem;
             transition: transform 0.3s ease;
         }
@@ -2250,22 +2251,19 @@
 
         .sureset-resources-section {
             background-color: #f0f4ff;
-            padding: 60px 0;
+            padding: 30px 0;
         }
 
         .sureset-resources-title {
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 2.5rem;
             font-weight: 700;
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
 
         .sureset-resources-card {
-            background: white;
             border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .sureset-brochure-image {
@@ -2278,7 +2276,7 @@
         .sureset-download-link {
             display: flex;
             align-items: center;
-            color: #0d6efd;
+            color: #003BF2;
             text-decoration: none;
             font-weight: 600;
             font-size: 1.1rem;
@@ -2287,7 +2285,7 @@
         }
 
         .sureset-download-link:hover {
-            color: #0a58ca;
+            color: #003BF2;
             transform: translateX(5px);
         }
 
@@ -2318,7 +2316,7 @@
 
         .sureset-contact-button {
             background-color: white;
-            color: #0d6efd;
+            color: #003BF2;
             border: none;
             padding: 12px 35px;
             border-radius: 6px;
@@ -2348,7 +2346,7 @@
         .sureset-title-main {
             font-size: 40px;
             font-weight: 700;
-            color: #0d6efd;
+            color: #003BF2;
             text-align: center;
             margin-bottom: 30px;
             line-height: 1.2;
@@ -2402,21 +2400,21 @@
         .sureset-location-icon {
             width: 30px;
             height: 40px;
-            background-color: #0d6efd;
+            background-color: #003BF2;
             clip-path: polygon(50% 100%, 0% 40%, 0% 20%, 50% 0%, 100% 20%, 100% 40%);
         }
 
         .sureset-email-icon {
             width: 40px;
             height: 30px;
-            background-color: #0d6efd;
+            background-color: #003BF2;
             clip-path: polygon(0% 0%, 50% 50%, 100% 0%, 100% 100%, 0% 100%);
         }
 
         .sureset-info-content h3 {
             font-size: 1.5rem;
             font-weight: 600;
-            color: #0d6efd;
+            color: #003BF2;
             margin-bottom: 8px;
         }
 
@@ -2442,7 +2440,7 @@
         }
 
         .sureset-form-section {
-            padding: 80px 20px;
+            padding: 40px 20px;
             background-color: #f8f9fa;
         }
 
@@ -2450,14 +2448,14 @@
             max-width: 800px;
             margin: 0 auto;
             background-color: #f0f3ff;
-            padding: 60px 80px;
+            padding: 30px 80px;
             border-radius: 20px;
         }
 
         .sureset-form-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #0d6efd;
+            color: #003BF2;
             text-align: center;
             margin-bottom: 40px;
         }
@@ -2475,7 +2473,7 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #0d6efd;
+            color: #003BF2;
             font-size: 1.2rem;
         }
 
@@ -2550,7 +2548,7 @@
         }
 
         .sureset-submit-btn:hover {
-            background-color: #0b5ed7;
+            background-color: #003BF2;
         }
 
         .sureset-submit-arrow {
@@ -2595,7 +2593,7 @@
         }
 
         .safetrak-main-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 40px;
             font-weight: 700;
             margin-bottom: 25px;
@@ -2645,7 +2643,7 @@
         }
 
         .safetrak-feature-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 24px;
             font-weight: 700;
             margin-bottom: 15px;
@@ -2666,7 +2664,7 @@
         }
 
         .safetrak-advantages-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 42px;
             font-weight: 700;
             margin-bottom: 50px;
@@ -2728,7 +2726,7 @@
         }
 
         .safetrak-benefit-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 10px;
@@ -2762,26 +2760,26 @@
             padding: 60px 0;
         }
         .section-1 h1 {
-            color: #0052cc;
+            color: #003BF2;
             font-weight: bold;
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
         .section-1 h2 {
-            color: #0052cc;
+            color: #003BF2;
             font-weight: bold;
             font-size: 2rem;
             margin-bottom: 30px;
         }
         .section-1 .challenge-title {
-            color: #0052cc;
+            color: #003BF2;
             font-weight: bold;
-            font-size: 1.8rem;
+            font-size: 2.1em;
             margin-bottom: 25px;
         }
         .section-1 p {
             color: #6c757d;
-            font-size: 1rem;
+            font-size: 18px;
             line-height: 1.6;
             margin-bottom: 15px;
         }
@@ -2840,7 +2838,7 @@
         }
 
         .vascular-section-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 40px;
             font-weight: 700;
             line-height: 1.15;
@@ -2855,7 +2853,7 @@
         }
 
         .vascular-commitment-title {
-            color: #0056d2;
+            color: #003BF2;
             font-size: 40px;
             font-weight: 700;
             line-height: 1.15;
@@ -3010,7 +3008,7 @@
         .privacy-policy-title {
             font-size: 48px;
             font-weight: 900;
-            color: #0050ff;
+            color: #003BF2;
             margin-bottom: 50px;
             text-align: center;
             letter-spacing: 1px;
@@ -3034,7 +3032,7 @@
         .privacy-policy-section-title {
             font-size: 24px;
             font-weight: 700;
-            color: #0050ff;
+            color: #003BF2;
             margin-top: 35px;
             margin-bottom: 15px;
             letter-spacing: 0.5px;
@@ -3066,7 +3064,7 @@
             content: "▸";
             position: absolute;
             left: 0;
-            color: #0050ff;
+            color: #003BF2;
             font-weight: bold;
             font-size: 18px;
         }
@@ -3078,7 +3076,7 @@
         }
 
         .privacy-policy-contact a {
-            color: #0050ff;
+            color: #003BF2;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
@@ -3086,7 +3084,7 @@
 
         .privacy-policy-contact a:hover {
             text-decoration: underline;
-            color: #003399;
+            color: #003BF2;
         }
 
         .privacy-policy-closing {
