@@ -51,7 +51,7 @@
                     <img src="img/SureSet logo.png" alt="SureSet Logo" class="navbar-logo">
                 </a>
 
-                <button class="navbar-toggle" onclick="toggleMenu()">
+                <button class="navbar-toggle" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -557,7 +557,7 @@
         <div class="about-container">
             <div class="about-content-grid">
                 <div class="about-image-wrapper">
-                    <img src="img/rapid different.png" alt="Alera Medtech" class="">
+                    <img src="img/rapid different.png" alt="Alera Medtech" class="about-main-image img-fluid">
                 </div>
 
                 <div class="about-text-content">
@@ -961,7 +961,9 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById('navbarMenu');
+            const btn = document.querySelector('.navbar-toggle');
             menu.classList.toggle('navbar-menu-active');
+            if (btn) btn.setAttribute('aria-expanded', menu.classList.contains('navbar-menu-active'));
         }
 
         // Video modal behavior
