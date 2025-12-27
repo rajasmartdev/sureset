@@ -1,0 +1,178 @@
+<!-- Shared header: topbar, navbar, modal and supporting scripts -->
+<!-- Topbar -->
+<div class="topbar">
+  <div class="topbar-container">
+    <div class="topbar-content">
+      <div class="topbar-left">
+        <a href="tel:+1234567890" class="topbar-contact-item">
+          <i class="fas fa-phone topbar-icon"></i>
+          <span>+123 456 7890</span>
+        </a>
+        <a href="mailto:sureset.info@aleramedtech.com" class="topbar-contact-item">
+          <i class="fas fa-envelope topbar-icon"></i>
+          <span>sureset.info@aleramedtech.com</span>
+        </a>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="topbar-social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="topbar-social-link"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="topbar-social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="topbar-social-link"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-content">
+      <a href="#" class="navbar-logo-link"><img src="img/SureSet logo.png" alt="SureSet Logo" class="navbar-logo"></a>
+
+      <button class="navbar-toggle" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="navbar-menu" id="navbarMenu">
+        <li class="navbar-menu-item"><a href="index.html" class="navbar-menu-link">Home</a></li>
+        <li class="navbar-menu-item"><a href="about.html" class="navbar-menu-link">About Us</a></li>
+        <li class="navbar-menu-item"><a href="safetrak-technology.html" class="navbar-menu-link">SafeTrak Technology</a></li>
+        <li class="navbar-menu-item"><a href="#" class="navbar-menu-link">Products</a></li>
+        <li class="navbar-menu-item"><a href="resourses.html" class="navbar-menu-link">Resources</a></li>
+        <li class="navbar-menu-item"><a href="contact.html" class="navbar-menu-link">Contact Us</a></li>
+        <li class="navbar-menu-item"><button class="navbar-cta-button" id="openModalBtn">Request Evaluation Samples</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal Overlay (shared) -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-container">
+    <button class="close-btn" id="closeModalBtn" aria-label="Close"></button>
+
+    <div class="form-header">
+      <h1 id="headerTitle">Request Evaluation Samples</h1>
+      <p id="headerSubtitle">Complete the form below to receive SureSet™ evaluation samples</p>
+    </div>
+
+    <div class="form-body">
+      <div class="form-content" id="formContent">
+        <form id="evaluationForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+            <span class="error-message" id="fullNameError">Please enter your full name</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Work Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError">Please enter a valid work email address</span>
+          </div>
+          <div class="form-group">
+            <label for="designation">Designation <span class="required">*</span></label>
+            <input type="text" id="designation" name="designation" required placeholder="e.g., Nurse Manager, Physician, Clinical Director">
+            <span class="error-message" id="designationError">Please enter your designation</span>
+          </div>
+          <div class="form-group">
+            <label for="department">Department <span class="required">*</span></label>
+            <input type="text" id="department" name="department" required placeholder="e.g., Emergency, ICU, Cardiology">
+            <span class="error-message" id="departmentError">Please enter your department</span>
+          </div>
+          <div class="form-group">
+            <label for="facilityName">Hospital/Clinic Name <span class="required">*</span></label>
+            <input type="text" id="facilityName" name="facilityName" required>
+            <span class="error-message" id="facilityNameError">Please enter your hospital or clinic name</span>
+          </div>
+          <div class="form-group">
+            <label for="productType">Product Type <span class="required">*</span></label>
+            <select id="productType" name="productType" required>
+              <option value="">-- Select Product Type --</option>
+              <option value="sureset-peripheral-iv">SureSet™ Peripheral IV Securement Device</option>
+              <option value="sureset-picc">SureSet™ PICC Line Securement</option>
+              <option value="sureset-central-line">SureSet™ Central Line Securement</option>
+              <option value="sureset-dialysis">SureSet™ Dialysis Catheter Securement</option>
+              <option value="multiple">Multiple Products</option>
+            </select>
+            <span class="error-message" id="productTypeError">Please select a product type</span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
+            <span class="error-message" id="phoneError">Please enter a valid phone number</span>
+          </div>
+          <div class="form-group">
+            <label for="estimatedVolume">Estimated Monthly Volume</label>
+            <input type="text" id="estimatedVolume" name="estimatedVolume" placeholder="e.g., 500 units">
+          </div>
+          <div class="form-group">
+            <label for="additionalInfo">Additional Information</label>
+            <textarea id="additionalInfo" name="additionalInfo" placeholder="Please share any specific requirements or questions..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Submit Request</button>
+        </form>
+      </div>
+
+      <div class="thank-you-content" id="thankYouContent">
+        <div class="thank-you-icon"><div class="checkmark"></div></div>
+        <h2>Thank You!</h2>
+        <p>Your request has been submitted successfully. Our team will contact you within 24-48 hours.</p>
+        <div class="download-section">
+          <h3>📄 Download Product Information</h3>
+          <div class="download-buttons">
+            <a href="pdf/Sureset_Vascular Acess Safety.pdf" class="download-btn secondary-btn" target="_blank">Download Full Product Catalog</a>
+          </div>
+        </div>
+        <button class="submit-btn" id="closeThankYou">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('navbarMenu');
+  const btn = document.querySelector('.navbar-toggle');
+  if (menu) {
+    menu.classList.toggle('navbar-menu-active');
+  }
+  if (btn) {
+    const isActive = menu && menu.classList.contains('navbar-menu-active');
+    btn.setAttribute('aria-expanded', isActive);
+  }
+}
+
+(function(){
+  const modal=document.getElementById('modalOverlay'); if(!modal) return;
+  const openBtn=document.getElementById('openModalBtn'); const closeBtn=document.getElementById('closeModalBtn'); const form=document.getElementById('evaluationForm'); const formContent=document.getElementById('formContent'); const thankYouContent=document.getElementById('thankYouContent'); const headerTitle=document.getElementById('headerTitle'); const headerSubtitle=document.getElementById('headerSubtitle'); const invalidEmailDomains=['gmail.com','yahoo.com','hotmail.com','outlook.com','aol.com','icloud.com','mail.com','protonmail.com','yandex.com','zoho.com'];
+  if(openBtn) openBtn.addEventListener('click', ()=>{ modal.classList.add('active'); document.body.style.overflow='hidden'; showForm(); });
+
+  // Close mobile menu when a menu item is clicked
+  const menuItems = document.querySelectorAll('.navbar-menu-item a');
+  menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const menu = document.getElementById('navbarMenu');
+      if (menu) {
+        menu.classList.remove('navbar-menu-active');
+        const btn = document.querySelector('.navbar-toggle');
+        if (btn) btn.setAttribute('aria-expanded', false);
+      }
+    });
+  });
+  function closeModal(){ modal.classList.remove('active'); document.body.style.overflow=''; }
+  if(closeBtn) closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('active')) closeModal(); });
+  function showForm(){ if(formContent) formContent.classList.remove('hidden'); if(thankYouContent) thankYouContent.classList.remove('active'); if(headerTitle) headerTitle.textContent='Request Evaluation Samples'; if(headerSubtitle) headerSubtitle.textContent='Complete the form below to receive SureSet™ evaluation samples'; }
+  function showThankYou(){ if(formContent) formContent.classList.add('hidden'); if(thankYouContent) thankYouContent.classList.add('active'); if(headerTitle) headerTitle.textContent='Request Submitted!'; if(headerSubtitle) headerSubtitle.textContent='Access your resources below'; try{ document.querySelector('.modal-container').scrollTop=0; }catch(e){}
+  }
+  const closeThank=document.getElementById('closeThankYou'); if(closeThank) closeThank.addEventListener('click', ()=>{ closeModal(); setTimeout(()=>{ showForm(); if(form) form.reset(); },300); });
+  function validateEmail(email){ const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/; if(!emailPattern.test(email)) return {valid:false,message:'Please enter a valid email address'}; const domain=email.split('@')[1].toLowerCase(); if(invalidEmailDomains.includes(domain)) return {valid:false,message:'Please use a work email address. Personal email domains (Gmail, Yahoo, Hotmail, etc.) are not accepted'}; return {valid:true}; }
+  function validatePhone(phone){ const phonePattern=/^[+]?[(]?[0-9]{1,4}[)]?[-\s.]?[(]?[0-9]{1,4}[)]?[-\s.]?[0-9]{1,9}$/; return phonePattern.test(phone.replace(/\s/g,'')); }
+  function showError(fieldId,message){ const field=document.getElementById(fieldId); const errorElement=document.getElementById(fieldId+'Error'); if(field) field.classList.add('error'); if(errorElement){ errorElement.textContent=message; errorElement.classList.add('show'); } }
+  function clearError(fieldId){ const field=document.getElementById(fieldId); const errorElement=document.getElementById(fieldId+'Error'); if(field) field.classList.remove('error'); if(errorElement) errorElement.classList.remove('show'); }
+  if(document.getElementById('email')) document.getElementById('email').addEventListener('blur', function(){ const email=this.value.trim(); if(email){ const validation=validateEmail(email); if(!validation.valid) showError('email', validation.message); else clearError('email'); } });
+  if(document.getElementById('phone')) document.getElementById('phone').addEventListener('blur', function(){ const phone=this.value.trim(); if(phone && !validatePhone(phone)) showError('phone','Please enter a valid phone number'); else if(phone) clearError('phone'); });
+  if(form){ form.querySelectorAll('input, select, textarea').forEach(field=>{ field.addEventListener('input', function(){ clearError(this.id); }); }); form.addEventListener('submit', function(e){ e.preventDefault(); let isValid=true; const fullName=document.getElementById('fullName').value.trim(); if(!fullName){ showError('fullName','Please enter your full name'); isValid=false; } else clearError('fullName'); const email=document.getElementById('email').value.trim(); const emailValidation=validateEmail(email); if(!email || !emailValidation.valid){ showError('email', emailValidation.message || 'Please enter a valid work email address'); isValid=false; } else clearError('email'); const designation=document.getElementById('designation').value.trim(); if(!designation){ showError('designation','Please enter your designation'); isValid=false; } else clearError('designation'); const department=document.getElementById('department').value.trim(); if(!department){ showError('department','Please enter your department'); isValid=false; } else clearError('department'); const facilityName=document.getElementById('facilityName').value.trim(); if(!facilityName){ showError('facilityName','Please enter your hospital or clinic name'); isValid=false; } else clearError('facilityName'); const productType=document.getElementById('productType').value; if(!productType){ showError('productType','Please select a product type'); isValid=false; } else clearError('productType'); const phone=document.getElementById('phone').value.trim(); if(!phone || !validatePhone(phone)){ showError('phone','Please enter a valid phone number'); isValid=false; } else clearError('phone'); if(isValid){ console.log('Form submitted successfully!', { fullName, email, designation, department, facilityName, productType, phone, estimatedVolume: document.getElementById('estimatedVolume').value.trim(), additionalInfo: document.getElementById('additionalInfo').value.trim() }); showThankYou(); } else { const firstError=form.querySelector('.error'); if(firstError) firstError.scrollIntoView({ behavior:'smooth', block:'center' }); } }); }
+})();
+</script>
